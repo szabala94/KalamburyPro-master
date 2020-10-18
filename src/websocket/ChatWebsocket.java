@@ -24,6 +24,7 @@ import model.ChatMessage.MsgType;
 import model.Score;
 import service.LoginUtil;
 
+
 /**
  * This websocket contains main logic of an app. It authenticates user after
  * session is opened, then processes incoming messages. Class is responsible for
