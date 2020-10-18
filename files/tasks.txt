@@ -1,0 +1,79 @@
+
+Do zrobienia:
+
+1. Has³o ma siê wyœwietlaæ tylko jednej osobie.
+2. Zrobiæ logowanie
+3. Czyszczenie tablicy u wszystkich przy nowym haœle.
+4. Tylko jedna osoba ma prawo do rysowania.
+5. Tylko osoba rysuj¹ca ma prawo wyczyœciæ tablicê (u wszystkich).
+6. Wysy³anie wiadomoœci po naciœniêciu Enter.
+7. Frontend
+
+
+Problem: User 1 i User 2 maja ró¿ne rozmiary canvasa i rysunek nie mieœci siê w tym mniejszym
+Rozwi¹zanie: poza koordynatami pikseli przesy³aæ te¿ rozmiar p³ótna, na tej podstawie mo¿na przeskalowaæ koordynaty pikseli po drugiej stronie
+
+Problemy 10.08:
+1. Websocket close dla rysuj¹cego usera: metoda nie wykonuje siê przed zamkniêciem w¹tku?
+
+Zrób:
+1. Przechowywanie stanu gry (stan p³ótna, lista i rola [rysuje lub nie] u¿ytkowników) 
+2. Lista userów w bazie, pobieraæ ich z bazy. Najpierw zapisywac nowego w bazie, a dopiero potem o pobieraæ. 
+
+ZADANIA DO ZROBIENIA NA KONIEC:
+
+Projekt:
+1. Dokumentacja dla jednego modu³u
+2. Klasa testowa w JUnit dla jednego modu³u
+3. Prezentacja w PP
+4. Kupiæ p³ytkê
+
+Programowanie:
+5. Sesja u¿ytkownika (login przy wiadomoœci, zalogowani + status)
+6. Wstrzykiwanie zale¿noœci (serwisy oraz EntityManager)
+<<<<<<< HEAD
+7. Kolory w canvasie
+8. Naprawiæ clean canvas (nie dzia³a przy zmianie rozmiaru)
+9. Rysowanie dostêpne tylko dla rysuj¹cego. 
+10. Podpisaæ klasy autorem
+11. Guzik "czyœæ p³ótno" dostêpny tylko dla rysuj¹cego
+12. Chat ma siê scrollowaæ przy nowych wiadomoœciach
+13. Zapis sekretu w bazie
+=======
+9. Rysowanie dostêpne tylko dla rysuj¹cego. 
+10. Podpisaæ klasy autorem
+11. Guzik "czyœæ p³ótno" dostêpny tylko dla rysuj¹cego
+13. Zapis sekretu w bazie
+14. Zapis stanu p³ótna. Nowi u¿ytkownicy nie widz¹ co by³o rysowane wczeœniej.
+15. Panel pokazuj¹cy aktywnych u¿ytkowników, ich punkty i status rysowania
+	- MsgType.SCOREBOARD
+	- przesy³a ca³¹ listê aktywnych u¿ytkowników w JSONie
+16. skalowanie gruboœci kreski
+
+ad. 5 Zrobione:
+- dodawanie nowych userów
+- sprawdzanie istniej¹cych
+- dodawanie aktywnych do tablicy ActiveUser
+
+Zrób:
+* cykliczny proces, który uzgadnia stan bazy danych ze stanem gry
+
+B³êdy:
+2. Brakuje guzika "Nastêpne s³owo" dla osoby rysuj¹cej
+3. Uniemo¿liwiæ wybór koloru dla nie-rysuj¹cych
+4. Zbierz 3 powy¿sze w jeden liniowy blok guzików
+6. Nie pozwól zalogowaæ siê drugi raz tym samym u¿ytkownikiem
+7. B³¹d: po wylogowaniu siê rysuj¹cego (po minimum jednym zgadniêciu) nie zostaje on usuniêty z bazy.
+Nie zostaje wylosowany nowy rysuj¹cy. Wylogowuj¹cy siê rysuj¹cy próbuje wys³aæ nowe has³o do siebie samego.
+Jest to niemo¿liwe, bo jego sesja jest ju¿ zamkniêta.
+-> "next drawing user has not been set"
+	
+Najnowsze zadania:
+Piotr: 
+	* napisaæ dokumentacjê
+	* wygenerowaæ docsa
+Maciek:
+	* na podstawie dokumentacji zrobiæ prezentacjê
+
+
+>>>>>>> refs/remotes/origin/code_refactorization
